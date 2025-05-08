@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:travel/common/helper/app_router.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton({required this.isEnd, required this.pageController, super.key});
@@ -10,7 +12,7 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (isEnd == true) {
-          Navigator.pushReplacementNamed(context, "/home");
+          context.go("/signin");
         } else {
           pageController.nextPage(
               duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
