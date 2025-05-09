@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class TextFieldEmail extends StatelessWidget {
-  const TextFieldEmail({super.key});
+class TextFieldEmailSignup extends StatelessWidget {
+  TextFieldEmailSignup({required this.email, super.key});
+  TextEditingController email;
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,7 @@ class TextFieldEmail extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.grey.shade200, borderRadius: BorderRadius.circular(10)),
       child: TextField(
+        controller: email,
         decoration: InputDecoration(
             border: InputBorder.none,
             hintText: "email",

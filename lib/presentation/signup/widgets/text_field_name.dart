@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TextFieldName extends StatelessWidget {
-  const TextFieldName({super.key});
+  TextFieldName({required this.name, super.key});
+  TextEditingController name;
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,7 @@ class TextFieldName extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.grey.shade200, borderRadius: BorderRadius.circular(10)),
       child: TextField(
+        controller: name,
         decoration: InputDecoration(
             border: InputBorder.none,
             hintText: "name",

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class SignupButton extends StatelessWidget {
-  SignupButton({super.key});
+  SignupButton({required this.onPressed, super.key});
+  VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onPressed,
       child: Container(
         width: double.infinity,
         height: 60,
