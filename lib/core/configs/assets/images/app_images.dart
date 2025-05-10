@@ -6,4 +6,5 @@ class AppImages {
   static String fc = "${basePath}fc.png";
   static String insta = "${basePath}insta.png";
   static String tw = "${basePath}tw.png";
+  static String profile = "${basePath}profile.png";
 }
